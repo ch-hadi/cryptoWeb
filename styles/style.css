@@ -135,28 +135,35 @@ strong {
     align-items: center;
 }
 .avm-main-div .avm {
-    width: auto;
-    background-color: #383d51;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    padding: 3.5px 20px;
-    height: 35px;
+  width: auto;
+  background-color: #e4e4e4;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  padding: 3.5px 20px;
+  height: 35px;
+  border-radius: 20px;
 
 }
+.h3, h3 {
+  font-size: 15px;
+  margin: 0;
+}
 .color {
-    padding: 2px;
-    border: 2px solid black;
-    /* text-align: center; */
-    display: flex;
-    justify-content: center;
-    margin: 0px 5px;
-    cursor: pointer;
+   
+ 
+  border: 1px solid black;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  margin: 0px 5px;
+  cursor: pointer;
+  border-radius: 20px;
 }
 .color1{
     margin: 0px 5px;
-    border: 2px solid transparent;
-    padding: 2px;
+    border: 1px solid transparent;
+   
     cursor: pointer;
 }
 .veri{
@@ -164,9 +171,9 @@ strong {
     margin-top: -5px;
 }
 .color1:hover{
-    padding: 2px;
-    border: 2px solid black;
-
+   
+    border: 1px solid black;
+    border-radius: 20px;
 
 }
 .avm-main-div .avm .image{
@@ -181,10 +188,19 @@ strong {
     height: 15px;
 
 }
-.avm-main-div .avm span{
-    color:white;
-    font-size: 12px;
-    margin-left: 5px;
+.avm-main-div .avm .p{
+    margin-top: 0;
+    /* margin-bottom: 1rem; */
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+.p-style{
+  margin-top: -1px;
+   color: rgb(17, 17, 17);
+   font-size: 8px;
+   letter-spacing: 5px;
+   font-weight: 600;
 }
 table {
     border-collapse: separate;

@@ -12,6 +12,9 @@
       rel="stylesheet"
       href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -25,12 +28,26 @@
   </head>
 
   <body>
+    <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()"
+          class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+          <i class="fa fa-remove"></i>
+      </a>
+      <div class="w3-bar-block w3-center">
+          <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+          <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+          <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+          <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+      </div>
+  </nav>
+
+
     <div class="main">
       <div class="container1">
         <div class="header">
           <div class="inner-header">
             <div class="logo">
-              <img src="./images/whiteLogo.39fa9618.svg" />
+              <img src="./images/transparent.png" />
             </div>
             <div class="manu-item">
               <ul>
@@ -38,9 +55,8 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Developers</a></li>
                 <li><a href="#">Security</a></li>
-                <li>
-                  <a href="#"> <i class="fas fa-bars"></i></a>
-                </li>
+                <li class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></li>
+                  
               </ul>
             </div>
           </div>
@@ -76,41 +92,50 @@
           <div class="color">
           <div class="avm">
             <div class="image">
-              <img src="./images/aave.720593eb.png" />
-              <span>v1</span>
+             <h3>TFX</h3>
+              <p class="p">v1</p>
             </div>
-          <p style="margin-top: -1px; color: white; font-size: 10px; letter-spacing: 5px;">market</p>
+          <p class="p-style">market</p>
           </div>
         </div>
         <div class="color1">
           <div class="avm">
             <div class="image">
-              <img src="./images/aave.720593eb.png" />
-              <span>v1</span>
-            </div>
-          <p style="margin-top: -1px; color: white; font-size: 10px; letter-spacing: 5px;">market</p>
+              <h3>TFX</h3>
+               <p class="p">v1</p>
+             </div>
+           <p class="p-style">market</p>
           </div>
         </div>
         
           <div class="color1">
           <div class="avm">
             <div class="image">
-              <img src="./images/ammWhite.ffcf04f6.png" />
-            
-            </div>
-          <p style="margin-top: -1px; color: white; font-size: 10px; letter-spacing: 5px;">market</p>
+              <h3>TFX</h3>
+               <p class="p">v1</p>
+             </div>
+           <p>market</p>
           </div>
           </div>
           
           <div class="color1">
             <div class="avm">
               <div class="image">
-                <img src="./images/aave.720593eb.png" />
-                <span>v1</span>
+                <h3>TFX</h3>
+                 <span></span>
+               </div>
+             <p class="p-style">market</p>  
+            </div>
+            </div>
+            <div class="color1">
+              <div class="avm">
+                <div class="image">
+                  <h3>ATFX</h3>
+                   <span></span>
+                 </div>
+               <p class="p-style">up market</p>  
               </div>
-            <p style="margin-top: -1px; color: white; font-size: 10px; letter-spacing: 5px;">market</p>
-            </div>
-            </div>
+              </div>
           </div>
           </div>
       </div>
@@ -275,8 +300,8 @@
     </div>
   </div>
   <div class="currency-divs">
-    <div class="pic-div" onclick="aparafi()" style="cursor: pointer;"><img src="./images/curncy-img.svg" ></div>
-    <div class="pic-div" onclick="blockchain()" style="cursor: pointer;"><img src="./images/blockchain.svg" ></div>
+    <div class="pic-div" id="aparafi" onclick="aparafi()" style="cursor: pointer;"><img src="./images/curncy-img.svg" ></div>
+    <div class="pic-div" id="blockchain" onclick="blockchain()" style="cursor: pointer;"><img src="./images/blockchain.svg" ></div>
     <div class="pic-div" onclick="dd()" style="cursor: pointer;"><img src="./images/framework.png" ></div>
     <div class="pic-div" onclick="dd()" style="cursor: pointer;"><img src="./images/DiFiance.png" ></div>
     <div class="pic-div" onclick="dd()" style="cursor: pointer;"><img src="./images/block-chain-com.png" ></div>
@@ -341,11 +366,27 @@
 </footer>
 
 <script>
-  document.getElementsByClassName("pic-div")=(click, aparafi , blockchain );
+  document.getElementsById("aparafi")=(click, aparafi );
   function aparafi(){
     window.open('https://www.parafi.capital/');
+  };
+  document.getElementById("blockchain")=(click, blockchain);
+  function blockchain(){
+
+    window.open('https://www.blockchain.com/');
   }
   aparafi();
+  blockchain();
+  
+  function w3_open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
 </script>
   </body>
 </html>
